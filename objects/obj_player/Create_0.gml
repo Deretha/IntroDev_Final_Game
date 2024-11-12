@@ -1,3 +1,7 @@
+//this just show how it works for pushing
+var fake_var = 0;
+var name = "REEEEEEEEE";
+
 
 dustparts = part_system_create();
 part_system_depth(dustparts,30); //particles on top
