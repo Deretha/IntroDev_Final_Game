@@ -33,7 +33,7 @@ if (frames_since_cloud > frames_bt_cloud || num_clouds < 4) {
 					//and count up the num of times we've tried to get
 					//a new position
 					x = random_range(15, room_width - 30);
-					y = random_range(25, room_height - 100);
+					y = random_range(100, room_height - 100);
 					tries +=1;
 			}
 		}
