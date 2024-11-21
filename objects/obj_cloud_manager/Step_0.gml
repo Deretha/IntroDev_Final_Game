@@ -13,30 +13,42 @@ frames_since_cloud += 1;
 if (frames_since_cloud > frames_bt_cloud || num_clouds < 4) {
 	//IF we do not have the max num of cloud
 	if(num_clouds < max_clouds) {
-	
+		
+		//loops through array and creates/spawns clouds in the specific locations 
+		for (var i = 0; i < array_length(cloud_locations); i++) {
+			    var x_pos = cloud_locations[i][0];
+			    var y_pos = cloud_locations[i][1];
+			
+			    // Check if there is already a cloud at this location
+				 if (instance_position(x_pos, y_pos, obj_cloud) == noone) {
+	                // Create a new cloud if none exists at this position
+	                var new_cloud = instance_create_layer(x_pos, y_pos, "Instances", obj_cloud);
+				}
+		}
 		//create a new cloud at a random position
-		var new_cloud = instance_create_layer(random_range(15, room_width - 30), 
-		random_range(100, room_height - 100), "Instances",obj_cloud)
+		//var new_cloud = instance_create_layer(
+		//random_range(15, room_width - 30), 
+		//random_range(100, room_height - 100), "Instances",obj_cloud)
 		
 		//spawn_timer = 0;
 		//the with structure allows us to change the scope
 		//of the following variables to whatever is in the paraenthesis
 		//in this case, the scope is of the newly created cloud
-		with(new_cloud) {
-			//count how many times we tried to change the clouds position
-			var tries = 0;
-			//while we've tried less than 3000 times
-			//and a cloud is inside our collider
-			while(tries < 12000 && collision_rectangle(x-12, y-12, x+12, y+12, obj_cloud, 
-				false, true) != noone) {
-					//set the new clouds's position to a new random position
-					//and count up the num of times we've tried to get
-					//a new position
-					x = random_range(15, room_width - 30);
-					y = random_range(100, room_height - 100);
-					tries +=1;
-			}
-		}
+		//with(new_cloud) {
+		//	//count how many times we tried to change the clouds position
+		//	var tries = 0;
+		//	//while we've tried less than 3000 times
+		//	//and a cloud is inside our collider
+		//	while(tries < 12000 && collision_rectangle(x-12, y-12, x+12, y+12, obj_cloud, 
+		//		false, true) != noone) {
+		//			//set the new clouds's position to a new random position
+		//			//and count up the num of times we've tried to get
+		//			//a new position
+		//			x = random_range(15, room_width - 30);
+		//			y = random_range(100, room_height - 100);
+		//			tries +=1;
+		//	}
+		//}
 	}
 	//since we just made a new cloud
 	//reset the counter

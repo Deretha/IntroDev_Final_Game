@@ -94,14 +94,18 @@ while(to_move_y !=0)
 		y = y+dir;
 		y_vel = bounce_vel;
 		r_y = 0;
-		//when bounce off cloud, changes sprite to obj disappearing
+		//when bounce off cloud, cloud loses health (starts crumbling)
+		//when healt hits 0, changes sprite to obj disappearing 
 		//then makes sure that the sprite animation can play
 		//then after the anim has finished playing, destroys cloud in its obj instances
 		//and destroys the cloud 
 		with(collidewithclouds){
 			cloud_health--;
+			if(cloud_health == 2){
+				sprite_index = cracking1_sprite;
+			}
 			if(cloud_health == 1){
-				sprite_index = cracking_sprite;
+				sprite_index = cracking2_sprite;
 			}
 			if(!is_disappearing && cloud_health == 0){
 				sprite_index = disappear_sprite;

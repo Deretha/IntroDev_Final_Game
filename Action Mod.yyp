@@ -44,7 +44,7 @@
     {"id":{"name":"obj_end_p1","path":"objects/obj_end_p1/obj_end_p1.yy",},"order":25,},
     {"id":{"name":"obj_med_cloud","path":"objects/obj_med_cloud/obj_med_cloud.yy",},"order":11,},
     {"id":{"name":"snd_collect","path":"sounds/snd_collect/snd_collect.yy",},"order":3,},
-    {"id":{"name":"spr_cloud_cracking","path":"sprites/spr_cloud_cracking/spr_cloud_cracking.yy",},"order":10,},
+    {"id":{"name":"spr_cloud_cracking1","path":"sprites/spr_cloud_cracking1/spr_cloud_cracking1.yy",},"order":10,},
     {"id":{"name":"spr_large_cloud","path":"sprites/spr_large_cloud/spr_large_cloud.yy",},"order":0,},
     {"id":{"name":"snd_cheering","path":"sounds/snd_cheering/snd_cheering.yy",},"order":4,},
     {"id":{"name":"spr_more_floor","path":"sprites/spr_more_floor/spr_more_floor.yy",},"order":18,},
@@ -71,6 +71,7 @@
     {"id":{"name":"snd_wall_bounce","path":"sounds/snd_wall_bounce/snd_wall_bounce.yy",},"order":0,},
     {"id":{"name":"obj_floor","path":"objects/obj_floor/obj_floor.yy",},"order":2,},
     {"id":{"name":"spr_player_two_loser","path":"sprites/spr_player_two_loser/spr_player_two_loser.yy",},"order":5,},
+    {"id":{"name":"spr_cloud_cracking2","path":"sprites/spr_cloud_cracking2/spr_cloud_cracking2.yy",},"order":11,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
