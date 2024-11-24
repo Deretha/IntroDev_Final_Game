@@ -10,7 +10,7 @@ frames_since_cloud += 1;
 
 //IF we've waited the max number of frames OR
 //if we have less than 4 clouds
-if (frames_since_cloud > frames_bt_cloud || num_clouds < 4) {
+if (frames_since_cloud > frames_bt_cloud || num_clouds < 9) {
 	//IF we do not have the max num of cloud
 	if(num_clouds < max_clouds) {
 		

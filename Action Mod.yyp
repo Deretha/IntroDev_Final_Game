@@ -48,6 +48,7 @@
     {"id":{"name":"obj_end_p1","path":"objects/obj_end_p1/obj_end_p1.yy",},"order":0,},
     {"id":{"name":"obj_med_cloud","path":"objects/obj_med_cloud/obj_med_cloud.yy",},"order":5,},
     {"id":{"name":"snd_collect","path":"sounds/snd_collect/snd_collect.yy",},"order":3,},
+    {"id":{"name":"spr_smaller_slash","path":"sprites/spr_smaller_slash/spr_smaller_slash.yy",},"order":26,},
     {"id":{"name":"spr_cloud_cracking1","path":"sprites/spr_cloud_cracking1/spr_cloud_cracking1.yy",},"order":10,},
     {"id":{"name":"spr_large_cloud","path":"sprites/spr_large_cloud/spr_large_cloud.yy",},"order":0,},
     {"id":{"name":"snd_cheering","path":"sounds/snd_cheering/snd_cheering.yy",},"order":4,},
