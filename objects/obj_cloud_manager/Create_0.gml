@@ -6,7 +6,7 @@ frames_since_cloud = 0;
 frames_bt_cloud = 120;
 
 //max num of clouds that can be on screen at once
-max_clouds = 12;
+max_clouds = 11;
 
 //cloud 0 = 255, 415
 //cloud 1 = 0, 320

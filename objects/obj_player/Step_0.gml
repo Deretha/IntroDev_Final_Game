@@ -138,12 +138,12 @@ if (stamina = 0)
    accel = 0;
 }
 
-
-if(obj_player_one.stamina <= 0){
+//this is the death conditions
+if(obj_player_one.stamina <= 0 || obj_player_one.y >= room_height + 300){
 	room_goto(rm_p2_win);
 	instance_destroy();
 }
-else if(obj_player_two.stamina <= 0){
+else if(obj_player_two.stamina <= 0 || obj_player_two.y >= room_height + 300){
 	room_goto(rm_p1_win);
 	instance_destroy();
 }
@@ -235,6 +235,8 @@ else if(y_vel > 0) { //bouncing downwards
 		sprite_index = spr_bounce;
 		image_index = 0;
 	}
+
+
 
 // Checks if player is moving up or down to set correct animation
 //if (y_vel > 0) { //bouncing downwards
