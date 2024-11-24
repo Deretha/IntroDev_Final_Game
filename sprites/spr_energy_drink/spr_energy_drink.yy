@@ -10,16 +10,16 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 8,
-  "bbox_right": 20,
+  "bbox_left": 7,
+  "bbox_right": 21,
   "bbox_top": 0,
-  "bbox_bottom": 31,
+  "bbox_bottom": 32,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "DynamicTexturePage": false,
   "width": 32,
-  "height": 32,
+  "height": 33,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -71,6 +71,7 @@
   },
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"537f5b05-c869-4ae6-b4e0-3519a952609b","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c5428227-84ed-4eba-9053-06c13870138d","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1",},
   ],
   "nineSlice": null,
   "parent": {

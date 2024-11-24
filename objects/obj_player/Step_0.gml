@@ -223,6 +223,8 @@ if (sprite_index == spr_attack) {
             var dist = point_distance(x, y, other_player.x, other_player.y);
             if (dist <= attack_range && other_player.invincible == false && is_facing) {
                 other_player.stamina -= attack_damage;
+				other_player.is_hurt = true;
+				other_player.flashAlpha = 1; //flashes to show player has been hurt
                 other_player.invincible = true;
             }
         }
@@ -279,6 +281,7 @@ if(invincible)
 	{
 		invincible = false;
 		invincible_timer = 0;
+		is_hurt = false;
 	}
 }
 
@@ -288,5 +291,10 @@ if (attack_cooldown > 0) {
 	is_attacking = false;
 }
 
+
+//reduces the flash, slowly fades it out from red to nothing
+if(flashAlpha > 0) {
+	flashAlpha -= 0.05;
+}
 
 

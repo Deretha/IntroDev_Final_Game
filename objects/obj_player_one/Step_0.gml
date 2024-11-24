@@ -21,3 +21,4 @@ else if (facing == 1) //right;
 {
 	image_xscale = 1;
 }
+
