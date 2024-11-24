@@ -180,77 +180,93 @@ camera_set_view_pos(view_camera[0], new_x, new_y);
 
 
 
+
 //when attack key is pressed, attacks and plays the slash animation
 //then if you are close enough to other player, which knows by
 //calculating  distance btwn players and if distance is smaller than  attack range,
 //you can attack and other player loses stamina
 if (keyboard_check_pressed(ord(attack_key)) && attack_cooldown <= 0 && instance_exists(other_player)) {
-	audio_play_sound(snd_attack,30,false);
-//? is a conditional operator. Will return one of two given values depending on 
-//whether the condition expression evaluates to true or false. 
-//Structure is: variable = <condition> ? <statement1 (if true)> : <statement2 (if false)>
-//therefore written below is: if facing right, slash effect will be drawn on right side of character
-//else if facing left (-1) slash effect will be drawn on left side of character
-	var slash_x_offset = (facing == 1) ? 30 : -15;
-    var slash_instance = instance_create_layer(x + slash_x_offset, y, "Effects", obj_slash);
-		
-	// Flip the slash effect if the player is facing left
-    if (facing == -1) {
-         slash_instance.image_xscale = -1;  // Flip the slash horizontally
-    } else if (facing == 1) {
-         slash_instance.image_xscale = 1;  // Ensure its back to normal when facing right
-	}
-     	
-	attack_cooldown = 20; // Set attack cooldown
-	
-	//checks to see if player is facing correct direction so then allowed to attack
-	//ex: if p1 is facing left AND p1 loc is to the right of p2, meaning p2 is to the left of p1
-	//then facing left. similar logic applies for facing right 
-	var is_facing = (facing == -1 && x > other_player.x) ||
-				(facing == 1 && x < other_player.x); 
-	var dist = point_distance(x, y, other_player.x, other_player.y);
-    if (dist <= attack_range && other_player.invincible == false && is_facing) {
-        other_player.stamina -= attack_damage;
-		other_player.invincible = true;
-		attack_cooldown = 20; // Set attack cooldown
-	}
-	
+    audio_play_sound(snd_attack, 30, false);
 
+    sprite_index = spr_attack; 
+    image_speed = 1;           // Play  attack animation
+    image_index = 0;           // Restart animation
+
+    attack_cooldown = 20;      // Set how long until you can attack again so not spamming
+    slash_created = false;     // Reset check for slash created
+	is_done_attacking = false; //reset check for done attacking
 }
 
-if(keyboard_check(ord(attack_key))){
-	sprite_index = spr_attack;
-	if(image_index >= image_number - 1) {
-		image_speed = 0; // Attack finished
-	}
-} //checks if player is moving up/down to set correct animation
-else if(y_vel > 0) { //bouncing downwards
-		image_speed = 1;
-		sprite_index = spr_bounce;
-		image_index = min(image_index + 0.01, 2);// Increment frame, but cap it at 3
-	//min() compares the values and always gives back the smaller one. therefore, 
-	//when img index reaches frame 3, will stop
-}else if(y_vel < 0) { //bouncing upwards
-		image_speed = 1; 
-		sprite_index = spr_bounce;
-		image_index = 0;
-	}
 
+if (sprite_index == spr_attack) {
+    // Check if attack animation is done and if is done, creates slash effect
+    if (!slash_created && image_index >= image_number - 1) {
+        //? is a conditional operator. Will return one of two given values depending on 
+		//whether the condition expression evaluates to true or false. 
+		//Structure is: variable = <condition> ? <statement1 (if true)> : <statement2 (if false)>
+		//therefore written below is: if facing right, slash effect will be drawn on right side of character
+        var slash_x_offset = (facing == 1) ? 30 : -15;
+        var slash_instance = instance_create_layer(x + slash_x_offset, y, "Effects", obj_slash);
 
+        // Flip the slash effect if the player is facing left
+        slash_instance.image_xscale = (facing == -1) ? -1 : 1;
 
-// Checks if player is moving up or down to set correct animation
-//if (y_vel > 0) { //bouncing downwards
-//    sprite_index = spr_bounce; // Ensure the sprite for bouncing is set
-//	image_index = min(image_index + 0.01, 2); // Increment frame, but cap it at 3
-//	//min() compares the values and always gives back the smaller one. therefore, 
-//	//when img index reaches frame 3, will stop
-//} else if (y_vel < 0) {
-//    //bouncing upwards
-//    sprite_index = spr_bounce;
-//    image_index = 0
-//}
+        // Mark the slash as created
+        slash_created = true;
 
+        //checks to see if player is facing correct direction so then allowed to attack
+		//ex: if p1 is facing left AND p1 loc is to the right of p2, meaning p2 is to the left of p1
+		//then facing left. similar logic applies for facing right 
+        if (instance_exists(other_player)) {
+            var is_facing = (facing == -1 && x > other_player.x) ||
+                            (facing == 1 && x < other_player.x); 
+            var dist = point_distance(x, y, other_player.x, other_player.y);
+            if (dist <= attack_range && other_player.invincible == false && is_facing) {
+                other_player.stamina -= attack_damage;
+                other_player.invincible = true;
+            }
+        }
+    }
 
+// If attack animation is done, transition to done attacking sprite
+    if (image_index >= image_number - 1) {
+        sprite_index = spr_done_attacking; 
+        image_speed = 1;                   // Play through animation
+        image_index = 0;                   // Restart animation
+        is_done_attacking = true;       
+    }
+}
+
+if (is_done_attacking && sprite_index == spr_done_attacking) {
+    //if the done animation is finished, go back to bouncing sprite
+    if (image_index >= image_number - 1) {
+        if (y_vel > 0) {
+            sprite_index = spr_bounce;
+            image_speed = 1;
+            image_index = 2; // Set frame for downward bounce
+        } else if (y_vel < 0) {
+            sprite_index = spr_bounce;
+            image_speed = 1;
+            image_index = 0; // Set frame for upward bounce
+        } 
+        is_done_attacking = false; // Reset check for done attacking 
+    }
+}
+
+// Handle other animations if not attacking or done attacking
+if (!is_done_attacking && sprite_index != spr_attack) {
+    if (y_vel > 0) { // Bouncing downwards
+        sprite_index = spr_bounce;
+        image_speed = 1;
+        image_index = min(image_index + 0.01, 2); // Increment frame, but cap it at 2
+		//min() compares the values and always gives back the smaller one. therefore, 
+		//when img index reaches frame 3, will stop
+    } else if (y_vel < 0) { // Bouncing upwards
+        sprite_index = spr_bounce;
+        image_speed = 1;
+        image_index = 0;
+    }
+}
 
 
 //cond for how invincibility turns off.

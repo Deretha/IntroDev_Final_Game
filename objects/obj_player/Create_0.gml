@@ -26,3 +26,6 @@ part_type_speed(star,1,1.2,0.01,0);
 part_type_direction(star,0,360,0,0);
 part_type_life(star,15,25); //duration of how long parts will be (frames)
 part_type_color1(star,#00CECB);
+
+slash_created = false;
+is_done_attacking = false;

@@ -36,6 +36,7 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"attack_key","path":"objects/obj_player/obj_player.yy",},"objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"value":"P",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"spr_bounce","path":"objects/obj_player/obj_player.yy",},"objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"value":"spr_player_two",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"spr_attack","path":"objects/obj_player/obj_player.yy",},"objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"value":"spr_player_two_attack",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"spr_done_attacking","path":"objects/obj_player/obj_player.yy",},"objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"value":"spr_player_two_attack_done",},
   ],
   "parent": {
     "name": "Objects",
