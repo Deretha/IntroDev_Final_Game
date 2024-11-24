@@ -5,9 +5,8 @@ var num_energy_drinks = instance_number(obj_energy_drink);
 frames_since_energy_drink += 1;
 //spawn_timer +=1;
 
-//IF we've waited the max number of frames OR
-//if we have less than 4 clouds
-if (frames_since_energy_drink > frames_bt_energy_drink || num_energy_drinks < 2) {
+//IF we've waited the max number of frames spawns a drink
+if (frames_since_energy_drink > frames_bt_energy_drink) {
 	//IF we do not have the max num of cloud
 	if(num_energy_drinks < max_energy_drinks) {
 	
@@ -30,7 +29,7 @@ if (frames_since_energy_drink > frames_bt_energy_drink || num_energy_drinks < 2)
 					//and count up the num of times we've tried to get
 					//a new position
 					x = random_range(15, room_width - 30);
-					y = random_range(25, room_height - 100);
+					y = random_range(25, room_height - 300);
 					tries +=1;
 			}
 		}
