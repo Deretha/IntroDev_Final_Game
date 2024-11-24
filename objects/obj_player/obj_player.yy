@@ -54,7 +54,7 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Spawning Managers",
+    "path": "folders/Objects/Spawning Managers.yy",
   },
 }
