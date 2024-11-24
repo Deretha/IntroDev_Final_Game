@@ -38,6 +38,7 @@
     {"id":{"name":"rm_p1_win","path":"rooms/rm_p1_win/rm_p1_win.yy",},"order":2,},
     {"id":{"name":"obj_cloud_manager","path":"objects/obj_cloud_manager/obj_cloud_manager.yy",},"order":8,},
     {"id":{"name":"obj_start_p1","path":"objects/obj_start_p1/obj_start_p1.yy",},"order":23,},
+    {"id":{"name":"spr_old_floor","path":"sprites/spr_old_floor/spr_old_floor.yy",},"order":25,},
     {"id":{"name":"obj_small_cloud","path":"objects/obj_small_cloud/obj_small_cloud.yy",},"order":9,},
     {"id":{"name":"spr_player_one","path":"sprites/spr_player_one/spr_player_one.yy",},"order":0,},
     {"id":{"name":"obj_large_cloud_disappear","path":"objects/obj_large_cloud_disappear/obj_large_cloud_disappear.yy",},"order":13,},

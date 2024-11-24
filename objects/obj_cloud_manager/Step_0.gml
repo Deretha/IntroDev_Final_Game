@@ -1,5 +1,5 @@
 //check how many clouds there are
-var num_clouds = instance_number(obj_cloud);
+var num_clouds = instance_number(obj_cloud)
 
 //instance_number(obj_small_cloud)
 //+ instance_number(obj_med_cloud) + instance_number(obj_large_cloud);
@@ -25,6 +25,7 @@ if (frames_since_cloud > frames_bt_cloud || num_clouds < 4) {
 	                var new_cloud = instance_create_layer(x_pos, y_pos, "Instances", obj_cloud);
 				}
 		}
+		
 		//create a new cloud at a random position
 		//var new_cloud = instance_create_layer(
 		//random_range(15, room_width - 30), 
