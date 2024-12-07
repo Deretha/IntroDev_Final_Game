@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_textbox",
+  "name": "obj_title",
   "spriteId": null,
   "solid": false,
   "visible": true,
@@ -29,7 +29,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Intro Cut Scene Stuff",
-    "path": "folders/Objects/Intro Cut Scene Stuff.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
 }
