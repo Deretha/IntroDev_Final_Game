@@ -10,4 +10,8 @@ draw_set_font(fnt_intro);
 // Draw the text 
 draw_text_ext(x + 25, y + 25, display_text, stringHeight, boxWidth);
 
+draw_set_font(fnt_instruc);
+draw_set_color(c_black);
+draw_text(room_width - 420, y + 140, "Press SPACE to Continue");
 
+draw_text(room_width - 250, y - 560, "Press S to Skip");

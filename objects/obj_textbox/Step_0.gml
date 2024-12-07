@@ -6,6 +6,11 @@ if (text_timer > 0) {
     text_timer = text_speed; // Reset timer
     text_position++;         // Move to next character
     display_text = string_copy(text[current_page], 1, text_position); // Updates displayed text
+	
+	if (text_position % 4 == 0) { // Play sound for every 2nd letter
+    var random_sound = talk_sounds[irandom(array_length(talk_sounds) - 1)];
+    audio_play_sound(random_sound, 1, false);
+	}
 }
 
 // once all text has been displayed and you hit the space button, goes to next page
@@ -25,4 +30,9 @@ if (keyboard_check_pressed(vk_space)) {
             display_text = "";
         }
     }
+}
+
+//press S to skip cutscene
+if(keyboard_check_pressed(ord("S"))){
+	room_goto(rm_start);
 }

@@ -10,6 +10,7 @@ text = [
 	"LET THE COMPETITION BEGIN!"
 ]
 
+talk_sounds = [snd_talk1, snd_talk2, snd_talk3, snd_talk4, snd_talk5];
 current_page = 0;
 
 stringHeight = 50;
