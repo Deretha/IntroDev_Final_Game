@@ -160,12 +160,34 @@ if(squish_timer != 0) {
 }
  
 
+// // Focus on the lower player
+//var lower_player_y = max(y, other_player.y); // Get the lower player's y position
+//focus_x = (x + other_player.x) / 2; // Average the x-positions of both players
+//focus_y = lower_player_y; // Focus on the lower player's y position
 
+//// Handle smooth camera movement
+//targetx = focus_x - (camera_get_view_width(view_camera[0]) / 2); // Center on the x-axis
+//targety = focus_y - (camera_get_view_height(view_camera[0]) / 2); // Center on the y-axis
+//currentx = camera_get_view_x(view_camera[0]); // Current camera x-position
+//currenty = camera_get_view_y(view_camera[0]); // Current camera y-position
+
+//// Blend between the current and target camera positions for smooth movement
+//new_x = targetx * 0.1 + currentx * 0.9;
+//new_y = targety * 0.1 + currenty * 0.9;
+
+//// Clamp x and y positions so the camera doesn't go out of bounds
+//new_x = clamp(new_x, 0, room_width - camera_get_view_width(view_camera[0]));
+//new_y = clamp(new_y, -200, room_height - camera_get_view_height(view_camera[0]));
+
+//// Set the final camera position
+//camera_set_view_pos(view_camera[0], new_x, new_y);
+
+ 
 //finds avg of p1 and p2 location
 focus_x = (x + other_player.x) /2;
 focus_y = (y + other_player.y) /2;
 //handle smooth camera movement
-targetx = focus_x - (camera_get_view_width(view_camera[0]) / 2); //where we want the camera to be  - centered on the player
+targetx = focus_x - (camera_get_view_width(view_camera[0]) / 2); //where we want the camera to be centered on the player
 targety = focus_y - (camera_get_view_height(view_camera[0]) / 2);
 currentx = camera_get_view_x(view_camera[0]); //current camera position
 currenty = camera_get_view_y(view_camera[0]);
@@ -177,8 +199,6 @@ new_y = targety * 0.1 + currenty * 0.9;
 new_x = clamp(new_x, 0, room_width - camera_get_view_width(view_camera[0]));
 // Set the final camera position
 camera_set_view_pos(view_camera[0], new_x, new_y);
-
-
 
 
 //when attack key is pressed, attacks and plays the slash animation
