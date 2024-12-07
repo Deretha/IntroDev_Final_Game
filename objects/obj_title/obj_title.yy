@@ -29,7 +29,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Title Screen Stuff",
+    "path": "folders/Objects/Title Screen Stuff.yy",
   },
 }
