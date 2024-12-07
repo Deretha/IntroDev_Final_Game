@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+audio_play_sound(snd_crowd,1,true);
+
 text = [
 	"*taps mic* Hello? Hello? Can everybody hear me? Okay! Good afternoon everyone, can I have your attention!",
 	"Today is a momentous occasion and it is my absolute honor to be your MC for....",

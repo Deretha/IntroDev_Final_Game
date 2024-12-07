@@ -37,6 +37,7 @@
     {"id":{"name":"obj_textbox","path":"objects/obj_textbox/obj_textbox.yy",},"order":17,},
     {"id":{"name":"spr_announcer_no_bob","path":"sprites/spr_announcer_no_bob/spr_announcer_no_bob.yy",},"order":29,},
     {"id":{"name":"rm_p2_win","path":"rooms/rm_p2_win/rm_p2_win.yy",},"order":3,},
+    {"id":{"name":"snd_crowd","path":"sounds/snd_crowd/snd_crowd.yy",},"order":13,},
     {"id":{"name":"spr_slash","path":"sprites/spr_slash/spr_slash.yy",},"order":8,},
     {"id":{"name":"obj_small_cloud_disappear","path":"objects/obj_small_cloud_disappear/obj_small_cloud_disappear.yy",},"order":8,},
     {"id":{"name":"spr_player_two_attack_done","path":"sprites/spr_player_two_attack_done/spr_player_two_attack_done.yy",},"order":9,},

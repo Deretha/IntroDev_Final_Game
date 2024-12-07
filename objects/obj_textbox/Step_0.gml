@@ -9,7 +9,7 @@ if (text_timer > 0) {
 	
 	if (text_position % 4 == 0) { // Play sound for every 2nd letter
     var random_sound = talk_sounds[irandom(array_length(talk_sounds) - 1)];
-    audio_play_sound(random_sound, 1, false);
+    audio_play_sound(random_sound, 10, false);
 	}
 }
 
@@ -24,6 +24,7 @@ if (keyboard_check_pressed(vk_space)) {
         current_page++;
         if (current_page >= array_length(text)) {
             room_goto(rm_start); //when at last page, next time hit space goes to start room
+			audio_stop_sound(snd_crowd);
         } else {
              // Reset vars for next page
             text_position = 0;
@@ -35,4 +36,5 @@ if (keyboard_check_pressed(vk_space)) {
 //press S to skip cutscene
 if(keyboard_check_pressed(ord("S"))){
 	room_goto(rm_start);
+	audio_stop_sound(snd_crowd);
 }
