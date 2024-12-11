@@ -70,6 +70,7 @@
     "eventStubScript": null,
   },
   "layers": [
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9805754e-9968-47ec-b2f4-580e5a890de2","visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 2",},
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"cc11aa82-3343-4fc6-a2e0-f80a0bcec914","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f21baed7-0076-4d9b-b5db-d05c8b47a5ce","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1",},
   ],
