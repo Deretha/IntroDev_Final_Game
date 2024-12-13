@@ -30,6 +30,8 @@ r_y -= to_move_y;
 var dir = sign(to_move_y);
 
 //ADD IN WALL COLLISION
+hit_right_wall = false;
+hit_left_wall = false;
 var dist_to_r_wall = room_width - x - 10;
 var dist_to_l_wall = x - 10;
 
@@ -42,6 +44,7 @@ if(to_move_x >= dist_to_r_wall)
 	x = room_width - 11;
 	x_vel = abs(x_vel) *-1;
 	r_x = 0;
+	hit_right_wall = true;
 	audio_play_sound(snd_wall_bounce,10,false);
 }
 else if(to_move_x <= -dist_to_l_wall)
@@ -49,6 +52,7 @@ else if(to_move_x <= -dist_to_l_wall)
 	x = 11;
 	x_vel = abs(x_vel);
 	r_x = 0;
+	hit_left_wall = true;
 	audio_play_sound(snd_wall_bounce,10,false);
 }
 else 
@@ -119,7 +123,6 @@ while(to_move_y !=0)
 	}
 		
 }
-
 
 //make sure stam never goes into neg
 if(stamina < 0)

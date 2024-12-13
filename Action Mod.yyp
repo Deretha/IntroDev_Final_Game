@@ -22,6 +22,7 @@
     {"id":{"name":"spr_med_cloud_disappear","path":"sprites/spr_med_cloud_disappear/spr_med_cloud_disappear.yy",},"order":3,},
     {"id":{"name":"obj_player_one","path":"objects/obj_player_one/obj_player_one.yy",},"order":0,},
     {"id":{"name":"obj_energy_drink_manager","path":"objects/obj_energy_drink_manager/obj_energy_drink_manager.yy",},"order":1,},
+    {"id":{"name":"spr_barrier","path":"sprites/spr_barrier/spr_barrier.yy",},"order":36,},
     {"id":{"name":"spr_small_cloud_disappear","path":"sprites/spr_small_cloud_disappear/spr_small_cloud_disappear.yy",},"order":5,},
     {"id":{"name":"spr_p2_pogostick","path":"sprites/spr_p2_pogostick/spr_p2_pogostick.yy",},"order":34,},
     {"id":{"name":"spr_player_one_winner","path":"sprites/spr_player_one_winner/spr_player_one_winner.yy",},"order":7,},

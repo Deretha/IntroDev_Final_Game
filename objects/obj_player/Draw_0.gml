@@ -22,6 +22,11 @@ if (flashAlpha > 0) { //if flashAlpha creater than 0, meaning flash activated, w
 	}
 }
 
+//if a player hits the room barrier, a barrier block is created to visually show they can't go past
+if(hit_right_wall){
+	draw_sprite(spr_barrier, 0, x + 10, y - 30);
+}
 
-
-
+if(hit_left_wall){
+	draw_sprite(spr_barrier, 0, x - 40, y - 30);
+}
