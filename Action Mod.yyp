@@ -57,6 +57,7 @@
     {"id":{"name":"rm_p1_win","path":"rooms/rm_p1_win/rm_p1_win.yy",},"order":2,},
     {"id":{"name":"snd_click","path":"sounds/snd_click/snd_click.yy",},"order":14,},
     {"id":{"name":"obj_cloud_manager","path":"objects/obj_cloud_manager/obj_cloud_manager.yy",},"order":2,},
+    {"id":{"name":"fnt_title","path":"fonts/fnt_title/fnt_title.yy",},"order":4,},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"order":4,},
     {"id":{"name":"obj_start_p1","path":"objects/obj_start_p1/obj_start_p1.yy",},"order":1,},
     {"id":{"name":"spr_textbox","path":"sprites/spr_textbox/spr_textbox.yy",},"order":28,},
