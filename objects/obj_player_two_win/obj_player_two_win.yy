@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_player_two_win",
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_player_two_winner",
+    "path": "sprites/spr_player_two_winner/spr_player_two_winner.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
